@@ -1,0 +1,9 @@
+You sent
+Man, copypasting from Messenger sure is inconvenient.
+You sent
+If only there was an app to help transcribe these chat logs.
+{{Nickname of Recipient}}
+You don't have to worry! This app can help with that.
+{{Nickname of Recipient}}
+{{Name of Recipient}}
+Run `python ./main.py`. You'll see!
