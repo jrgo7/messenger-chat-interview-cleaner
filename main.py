@@ -69,7 +69,7 @@ class App(tk.Tk):
 
     def ask_transcript(self):
         file_name = filedialog.askopenfilename()
-        with open(file_name, mode='w', encoding='utf-8') as file_pointer:
+        with open(file_name, mode='r', encoding='utf-8') as file_pointer:
             lines = list(map(lambda line: line.strip("\n"), file_pointer.readlines()))
         self.list_items.set(lines)
         self.display_lines()
