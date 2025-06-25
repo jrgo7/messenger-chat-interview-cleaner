@@ -77,7 +77,7 @@ class App(tk.Tk):
     def save_as(self):
         file_name = filedialog.asksaveasfilename()
         lines = self.list_items.get()
-        with open(file_name, mode='w', encoding='utf-8') as file_pointer():
+        with open(file_name, mode='w', encoding='utf-8') as file_pointer:
             file_pointer.write("\n".join(lines))
 
     def display_lines(self):
