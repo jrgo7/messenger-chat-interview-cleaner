@@ -68,15 +68,17 @@ class App(tk.Tk):
             self.popup_menu.grab_release()
 
     def ask_transcript(self):
-        file_pointer = filedialog.askopenfile()
-        lines = list(map(lambda line: line.strip("\n"), file_pointer.readlines()))
+        file_name = filedialog.askopenfilename()
+        with open(file_name, mode='w', encoding='utf-8') as file_pointer:
+            lines = list(map(lambda line: line.strip("\n"), file_pointer.readlines()))
         self.list_items.set(lines)
         self.display_lines()
 
     def save_as(self):
-        file_pointer = filedialog.asksaveasfile()
+        file_name = filedialog.asksaveasfilename()
         lines = self.list_items.get()
-        file_pointer.write("\n".join(lines))
+        with open(file_name, mode='w', encoding='utf-8') as file_pointer():
+            file_pointer.write("\n".join(lines))
 
     def display_lines(self):
         for i, line in enumerate(self.list_items.get()):
